@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 export function Card({ children, className = "", as: Component = "div", ...rest }) {
@@ -64,3 +65,5 @@ export default function App() {
     </div>
   );
 }
+=======
+>>>>>>> 6af7d14 (Add clean App.jsx)
