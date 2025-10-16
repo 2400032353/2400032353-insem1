@@ -1,13 +1,9 @@
 import React from "react";
 
-// -----------------------------
-// Card component (can be saved as Card.js)
-// -----------------------------
 export function Card({ children, className = "", as: Component = "div", ...rest }) {
-  // accepts props.children and optional className
   return (
     <Component
-      className={`border rounded-2xl p-6 shadow-sm bg-white dark:bg-gray-800 dark:border-gray-700 ${className}`} 
+      className={`border rounded-2xl p-6 shadow-sm bg-white dark:bg-gray-800 dark:border-gray-700 ${className}`}
       {...rest}
     >
       {children}
@@ -15,15 +11,11 @@ export function Card({ children, className = "", as: Component = "div", ...rest 
   );
 }
 
-// -----------------------------
-// Example usage (default export App)
-// -----------------------------
 export default function App() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-8 space-y-6">
-      <h1 className="text-2xl font-bold">Card &amp; props.children — Examples</h1>
+      <h1 className="text-2xl font-bold">Card Examples</h1>
 
-      {/* Simple text card */}
       <Card>
         <h2 className="text-lg font-semibold">Simple Text Card</h2>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
@@ -31,7 +23,6 @@ export default function App() {
         </p>
       </Card>
 
-      {/* Card with image and caption */}
       <Card className="max-w-md">
         <img
           src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&q=60"
@@ -41,9 +32,8 @@ export default function App() {
         <figcaption className="text-sm text-gray-500">A scenic photograph inside a Card.</figcaption>
       </Card>
 
-      {/* Card with actions */}
       <Card>
-        <h3 className="font-medium">Card with actions</h3>
+        <h3 className="font-medium">Card with Actions</h3>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Use cards for grouping UI elements like buttons.</p>
         <div className="mt-4 flex gap-3">
           <button className="px-4 py-2 rounded-lg border">Cancel</button>
@@ -51,7 +41,6 @@ export default function App() {
         </div>
       </Card>
 
-      {/* Card containing a form */}
       <Card>
         <h3 className="font-medium">Subscribe</h3>
         <form className="mt-3 flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
@@ -60,7 +49,6 @@ export default function App() {
         </form>
       </Card>
 
-      {/* Card using `as` prop to render a section element */}
       <Card as="section" className="max-w-xl">
         <h4 className="font-semibold">List inside Card</h4>
         <ul className="mt-2 list-disc pl-5 text-sm text-gray-600 dark:text-gray-300">
@@ -70,7 +58,9 @@ export default function App() {
         </ul>
       </Card>
 
-      <p className="text-xs text-gray-500">Tip: move the Card component to <code>Card.js</code> and import it where needed.</p>
+      <p className="text-xs text-gray-500">
+        Tip: move the Card component to <code>Card.js</code> and import it where needed.
+      </p>
     </div>
   );
 }
